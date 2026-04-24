@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  color-scheme: dark;
+  background: #090612;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #090612;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(177, 133, 255, 0.16), transparent 24rem),
+    radial-gradient(circle at 85% 8%, rgba(123, 77, 255, 0.14), transparent 22rem),
+    linear-gradient(180deg, #090612 0%, #130d24 44%, #090612 100%);
+  color: #f7f1ff;
+  font-family: var(--font-display);
+}
+
+main {
+  isolation: isolate;
+}
+
+.parallax-image {
+  transform: translate3d(0, 0, 0) scale(1.05);
+  will-change: transform;
+}
+
+.parallax-slice {
+  will-change: transform;
+}
+
+::selection {
+  background: rgba(177, 133, 255, 0.42);
+  color: white;
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(145deg, rgba(245, 236, 255, 0.12), rgba(177, 133, 255, 0.055));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(22px) saturate(145%);
+}
+
+.noise-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  opacity: 0.055;
+  mix-blend-mode: screen;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.24) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.story-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

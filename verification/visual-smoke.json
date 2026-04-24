@@ -1,0 +1,38 @@
+[
+  {
+    "name": "desktop",
+    "heroStats": {
+      "ok": true,
+      "width": 1440,
+      "height": 1000,
+      "litPixels": 700,
+      "variance": 37272
+    },
+    "scrollStats": {
+      "ok": true,
+      "width": 1440,
+      "height": 1000,
+      "litPixels": 1222,
+      "variance": 63228
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "heroStats": {
+      "ok": true,
+      "width": 390,
+      "height": 844,
+      "litPixels": 1047,
+      "variance": 55437
+    },
+    "scrollStats": {
+      "ok": true,
+      "width": 390,
+      "height": 844,
+      "litPixels": 2060,
+      "variance": 107579
+    },
+    "errors": []
+  }
+]
